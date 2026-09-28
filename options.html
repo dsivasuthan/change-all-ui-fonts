@@ -8,35 +8,52 @@
 	font-family: Consolas, monospace;
 	font-size: 14px!important;
 }
+.excluded-site {
+	margin: 5px 0;
+	padding: 5px;
+	background-color: #333;
+	border-radius: 3px;
+}
+.remove-site {
+	background-color: #ff4444;
+	color: white;
+	border: none;
+	padding: 2px 6px;
+	margin-left: 10px;
+	border-radius: 2px;
+	cursor: pointer;
+}
 </style>
 </head>
 <body>
-	<p style="text-align:right;"><a href="https://github.com/dsivasuthan/change-all-ui-fonts">source</a></p>
-	<div style="padding: 10px; border: grey 1px solid; ">
-		<span>font-name:</span>
-		<input id="font_name" type="text" name="font_name" value="" size="50" placeholder="Consolas"><br><br>
-		<button id="save-fontname">save</button>
-	</div>
-	<br>
 
-	<div style="padding: 10px; border: grey 1px solid; ">
-		<p>add exception:</p>
-		<input id="url" type="text" name="url" value="" size="50"><br><br>
-		<button id="add-exception">add exception</button>
-	</div>
-	<br>
-
-	<div style="padding: 10px; border: grey 1px solid; ">
-		<p>added exceptions:</p>
-		<select name="urls" id="urls">
-		</select>
-		<br>
-		<br>
-		<button id="remove-exception">remove exception</button>
-	</div>
-
+	<span>font-name:</span>
+	<input id="font_name" type="text" name="font_name" value="" size="50" placeholder="Consolas"><br><br>
+	<button id="click-this">save</button>
 	<br>
 	<span id="status"></span>
+	<br>
+
+	<hr>
+
+	<h3>Site Exclusion</h3>
+	<button id="exclude-current-site">Exclude site</button>
+	<br><br>
+	<span id="exclude-status"></span>
+	<br>
+	<div id="excluded-sites-list">
+		<h4>Excluded Sites:</h4>
+		<div id="excluded-sites-container"></div>
+	</div>
+
+	<hr>
+
+	<p style="">
+		<a href="https://www.paypal.com/donate?hosted_button_id=8U8XGZD9KHF5U" target="_blank">
+			support development by donating<br>
+			<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+		</a>
+	</p>
 
 </body>
 </html>

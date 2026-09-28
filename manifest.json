@@ -1,28 +1,29 @@
 {
-   
+   "action": {
+      "default_icon": "icon.png",
+      "default_popup": "options.html",
+      "default_title": "change font family"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
    "content_scripts": [ {
       "all_frames": true,
       "exclude_globs": [  ],
       "include_globs": [ "*" ],
-      "js": [ "foo.js" , "scripts.js" ],
+      "js": [ "foo.js", "scripts.js" ],
       "matches": [ "http://*/*", "https://*/*" ],
       "run_at": "document_start"
    } ],
    "description": "Changes all the UI font to a user-given font.",
-  
-   "manifest_version":2,
-   
+   "icons": {
+      "128": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApEkZAYhq1rKeN+XKi7LTgAgj7SMlfhW2IVTUChQ8M3l8VzIx/eN8LNLl0WmVUZe2p9h2jsRlt5EE7vr32Fel/HMAuBBSteaSqU0nxnWt/rePZSipCDmIfGZ45OI7tWUTjm6OgVyVJbxlIE4nnetZcTg6ZfSZ81m8JRbvCOjKIgd9K4ZvUbnw9xb55BnxNbM5FclXSAxAruYQR4t6NbpM/yKoWlxBjl90QioYLg1fOrVbFZN4Fgo6S0aTGPyw2p22vkl7l/86obo0uc3HtJKa8s8bU9NFTdsEeTs1danSh0FjmawrVFihxqdQZ1r9DkXZEzpfVUc+6v0XT6WHC8ROHwIDAQAB",
+   "manifest_version": 3,
    "name": "change all UI fonts",
    "options_page": "options.html",
-   "version": "1.4.1",
-   "browser_action": {
-    "default_icon": "icon.png",
-    "default_title": "change font family",
-    "default_popup": "options.html"
-  },
-  "icons": { "128": "icon.png" },
-  "background": {
-    "scripts": ["foo.js"]
-  },
-  "background": {"page": "background.html"}
+   "permissions": [ "storage", "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5.1"
 }
